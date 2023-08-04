@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +35,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.small-button{
+  display: inline-block!important;
+  padding:5px 10px!important;
+  font-size: 12px!important;
+}
+
+/* card */
+.card-foot{
+  padding: 15px;
+}
+.card{
+  padding: 20px;
+  transition: 0.5s;
+}
+.card:hover{
+  transform: scale(1.05);
+}
+.card img{
+  margin: auto;
+}
+
+.card p{
+  font-size: 14px;
 }
