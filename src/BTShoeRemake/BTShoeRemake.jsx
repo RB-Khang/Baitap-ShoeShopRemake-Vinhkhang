@@ -9,6 +9,7 @@ const BTShoeRemake = () => {
   return (
     <div className='container'>
         <h1 className='text-center mt-3'>Bài tập Shoe-Shop Remake</h1>
+        <div className='d-flex flex-row-reverse'><button className='btn btn-success float-right'>Your cart</button></div>
       <ShoeList shoeList={shoeList}></ShoeList>
       <Cart></Cart>
       <ModalDetail></ModalDetail>

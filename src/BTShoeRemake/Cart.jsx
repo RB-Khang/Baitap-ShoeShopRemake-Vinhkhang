@@ -23,7 +23,7 @@ const Cart = () => {
                                         <tr className='fw-bold'>
                                             <td className='text-center'>STT</td>
                                             <td>Tên</td>
-                                            {/* <td>Loại sản phẩm</td> */}
+                                            <td>Ảnh</td>
                                             {/* <td>Mô tả</td> */}
                                             <td className='text-center'>Giá tiền</td>
                                             <td className='text-center'>Số lượng</td>
@@ -38,10 +38,12 @@ const Cart = () => {
                                                     <tr key={item.id}>
                                                         <td className='text-center'>{index + 1}</td>
                                                         <td>{item.name}</td>
-                                                        {/* <td>{item.alias}</td> */}
+                                                        <td ><img src={item.image} style={{
+                                                            width: 70,
+                                                        }}></img></td>
                                                         {/* <td>{item.shortDescription}</td> */}
                                                         <td className='text-center'>{item.price}</td>
-                                                        <td className='d-flex justify-content-evenly'><button className='btn btn-outline-dark small-button' onClick={() => {
+                                                        <td><button className='btn btn-outline-dark small-button' onClick={() => {
                                                             dispatch(BTShoeAction.increaseItem(item))
                                                         }}>+</button>  {item.soLuong}  <button className='btn btn-outline-dark small-button' onClick={() => {
                                                             dispatch(BTShoeAction.decreaseItem(item))
@@ -57,13 +59,14 @@ const Cart = () => {
                                     </tbody>
                                     <tr>
                                         <td></td>
+                                        <td>Tổng tiền</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td className='fw-bold text-center'>{
+                                        <td className='fw-bold text-center'>$ {
                                             cartList.reduce((total, currentValue) => {
-                                                return total + currentValue.soLuong* currentValue.price
-                                            },0)
+                                                return total + currentValue.soLuong * currentValue.price
+                                            }, 0)
                                         }</td>
                                     </tr>
                                 </table>

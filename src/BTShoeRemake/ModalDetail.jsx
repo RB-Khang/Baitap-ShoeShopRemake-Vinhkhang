@@ -26,7 +26,7 @@ const ModalDetail = () => {
                                     <thead></thead>
                                     <tbody>
                                         <tr>
-                                            <td>Tên sản phẩm:</td>
+                                            <td>Sản phẩm:</td>
                                             <td>{productDetail.name}</td>
                                         </tr>
                                         <tr>
@@ -35,10 +35,6 @@ const ModalDetail = () => {
                                         </tr>
                                         <tr>
                                             <td>Mô tả:</td>
-                                            <td>{productDetail.shortDescription}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Chi tiết:</td>
                                             <td>{productDetail.description}</td>
                                         </tr>
                                         <tr>
