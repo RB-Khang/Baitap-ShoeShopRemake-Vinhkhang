@@ -7,22 +7,22 @@ const ShoeItem = (props) => {
     const { shoe } = props
     const dispatch = useDispatch()
     return (
-        <div className='col-4'>
+        <div className='col-3'>
             <div className="card mb-4 " >
                 <img src={shoe.image} alt="" style={{
-                    width:270,
+                    width: 270,
                 }} />
                 <div className="card-body" style={{
-                height:160,
-            }}>
+                    height: 120,
+                }}>
                     <h4>{shoe.name}</h4>
-                    <p>{shoe.description}</p>
+                    <p>{shoe.shortDescription}</p>
                 </div>
                 <div className="card-foot d-flex justify-content-between">
-                    <button className='btn btn-outline-dark' data-bs-toggle="modal" data-bs-target="#cartModal" onClick={()=>{
+                    <button className='btn btn-outline-dark' data-bs-toggle="modal" data-bs-target="#cartModal" onClick={() => {
                         dispatch(BTShoeAction.handleCart(shoe))
                     }}>Add to cart</button>
-                    <button className='btn btn-outline-success' data-bs-toggle="modal" data-bs-target="#detailModal" onClick={()=>{
+                    <button className='btn btn-outline-success' data-bs-toggle="modal" data-bs-target="#detailModal" onClick={() => {
                         dispatch(BTShoeAction.handleDetailShoe(shoe))
                     }}>Detail</button>
                 </div>

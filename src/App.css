@@ -32,32 +32,37 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+.card-body p{
+  overflow: hidden;
+}
 
-.small-button{
-  display: inline-block!important;
-  padding:5px 10px!important;
-  font-size: 12px!important;
+td {
+  vertical-align: middle;
 }
 
 /* card */
-.card-foot{
+.card-foot {
   padding: 15px;
 }
-.card{
+
+.card {
   padding: 20px;
   transition: 0.5s;
 }
-.card:hover{
+
+.card:hover {
   transform: scale(1.05);
 }
-.card img{
+
+.card img {
   margin: auto;
 }
 
-.card p{
+.card p {
   font-size: 14px;
 }

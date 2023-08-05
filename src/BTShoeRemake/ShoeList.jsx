@@ -4,7 +4,7 @@ import ShoeItem from './ShoeItem'
 const ShoeList = ({shoeList}) => {
     // console.log(shoeList);
   return (
-    <div className='row mt-4'>
+    <div className='row mt-5'>
         {shoeList.map(shoe =>{
             return <ShoeItem key={shoe.id} shoe={shoe}></ShoeItem>
         })
